@@ -10,11 +10,11 @@ import (
 
 // Config is the top-level application configuration.
 type Config struct {
-	App      App
-	Database Database
-	JWT      JWT
-	Kafka    Kafka
-	Log      Log
+	App      App      `mapstructure:",squash"`
+	Database Database `mapstructure:",squash"`
+	JWT      JWT      `mapstructure:",squash"`
+	Kafka    Kafka    `mapstructure:",squash"`
+	Log      Log      `mapstructure:",squash"`
 }
 
 // App holds HTTP server settings.
